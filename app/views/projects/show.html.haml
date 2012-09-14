@@ -6,6 +6,10 @@
 %p
   %b Description:
   = @project.description
+%p
+  %b Task:
+  - @project.tasks.each_with_index do |task, index|
+    = task.description
 
 = link_to 'Edit', edit_project_path(@project)
 \|
